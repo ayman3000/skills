@@ -1,5 +1,17 @@
 # Claude Skills
 
+This directory contains skills specifically designed for the Claude desktop application.
+
+## How to Upload a Skill
+
+To import any of these skills into your Claude Desktop application:
+1. Open the Claude Desktop app.
+2. Select **"Create Skill"** from the sidebar or settings.
+3. Choose **"Upload a skill"**.
+4. Select the desired `.skill` file from this directory.
+
+---
+
 ## PDF Course Creator Skill
 **File:** `pdf-course-skill.skill`
 
