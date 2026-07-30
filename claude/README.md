@@ -10,8 +10,6 @@ To import any of these skills into your Claude Desktop application:
 3. Choose **"Upload a Skill"**.
 4. Select the `SKILL.md` file from the desired skill directory.
 
-For skills with `references/` subdirectories, upload the `SKILL.md` file — Claude resolves the references relative to it.
-
 ---
 
 ## PDF Course Creator Skill
@@ -26,14 +24,13 @@ Use this skill whenever the user wants to create a polished, publication-ready P
 
 **Directory:** `trustworthy-app-principles/`
 
-Ten principles for building and auditing applications that users can trust — desktop or web. Derived from real AI-assisted development and audit work.
+Ten stack-agnostic principles for building and auditing applications that users can trust — desktop or web. Derived from real AI-assisted development and audit work.
 
 **When to use:**
 - Before shipping a new feature
 - When auditing an existing codebase for trust issues
 - When reviewing a PR that touches I/O, error handling, or user actions
 - When designing a new screen or interaction flow
-- When deciding whether a Next.js/Supabase app is ready for Vercel Preview or Production
 - When designing or auditing login history, authentication telemetry, or security-event retention
 
 **The ten principles:**
@@ -50,14 +47,5 @@ Ten principles for building and auditing applications that users can trust — d
 10. **Present numbered options with a recommended choice** — decisions should be scannable and actionable
 
 **Includes:**
-- 17-item audit checklist
-- 31-entry common violations catalog
-- 8 reference documents:
-  - `references/nextjs-inline-patterns.md` — concrete Next.js + Supabase implementation patterns
-  - `references/nextjs-platform-audit-patterns.md` — real-world violations and fixes
-  - `references/nextjs-audit-fix-recipes.md` — exact code patterns for common fixes
-  - `references/vercel-release-readiness.md` — full Next.js + Supabase + Vercel release protocol
-  - `references/admin-navigation-performance.md` — authenticated navigation performance
-  - `references/public-cms-navigation-performance.md` — public CMS navigation architecture
-  - `references/stale-while-revalidate-pattern.md` — cached background refresh decision framework
-  - `references/authentication-security-events.md` — login history and security telemetry design
+- 16-item audit checklist
+- 12-entry common violations catalog

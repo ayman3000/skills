@@ -10,8 +10,7 @@ skills/
 │   ├── pdf-course-skill/
 │   │   └── SKILL.md                  # PDF book/manual/course generator
 │   └── trustworthy-app-principles/
-│       ├── SKILL.md                  # 10 principles + audit checklist for app trust
-│       └── references/               # 8 deep-dive reference docs
+│       └── SKILL.md                  # 10 principles + audit checklist for app trust
 └── codex/                            # (Currently empty)
 ```
 
@@ -27,7 +26,7 @@ Generates polished, publication-ready PDF books, manuals, guides, and course mat
 
 **Directory:** `claude/trustworthy-app-principles/`
 
-Ten principles for building and auditing applications that users can trust — desktop or web. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes a 17-item audit checklist, a 31-entry common violations catalog, and 8 reference documents for Next.js/Supabase patterns, Vercel release readiness, admin navigation performance, public CMS navigation, stale-while-revalidate, authentication security events, and audit fix recipes.
+Ten stack-agnostic principles for building and auditing applications that users can trust — desktop or web. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes a 16-item audit checklist and a 12-entry common violations catalog.
 
 **The ten principles:**
 
@@ -48,8 +47,6 @@ To import a skill into your Claude Desktop application:
 1. Open the Claude Desktop app.
 2. Select **"Create Skill"**.
 3. Choose **"Upload a Skill"** and select the `SKILL.md` from the desired skill directory.
-
-For skills with `references/` subdirectories, upload the `SKILL.md` file — Claude will resolve the references relative to it.
 
 ## License
 
