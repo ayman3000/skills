@@ -7,9 +7,10 @@ A centralized collection of custom skills for AI agents like Claude and Codex. E
 ```
 skills/
 ├── claude/
-│   ├── pdf-course-skill.skill        # PDF book/manual/course generator
-│   └── trustworthy-app-principles/   # 10 principles + audit checklist for app trust
-│       ├── SKILL.md
+│   ├── pdf-course-skill/
+│   │   └── SKILL.md                  # PDF book/manual/course generator
+│   └── trustworthy-app-principles/
+│       ├── SKILL.md                  # 10 principles + audit checklist for app trust
 │       └── references/               # 8 deep-dive reference docs
 └── codex/                            # (Currently empty)
 ```
@@ -18,7 +19,7 @@ skills/
 
 ### PDF Course Creator
 
-**File:** `claude/pdf-course-skill.skill`
+**Directory:** `claude/pdf-course-skill/`
 
 Generates polished, publication-ready PDF books, manuals, guides, and course materials. Handles Markdown authoring with LaTeX headers, pandoc compilation, Mermaid diagram rendering, and minimal cover pages via Playwright. General-purpose — works for any topic.
 
@@ -46,9 +47,9 @@ Ten principles for building and auditing applications that users can trust — d
 To import a skill into your Claude Desktop application:
 1. Open the Claude Desktop app.
 2. Select **"Create Skill"**.
-3. Choose **"Upload a skill"** and select the `.skill` file or `SKILL.md` from the `claude/` directory.
+3. Choose **"Upload a Skill"** and select the `SKILL.md` from the desired skill directory.
 
-For folder-based skills (like `trustworthy-app-principles`), upload the `SKILL.md` file — Claude will resolve the `references/` directory relative to it.
+For skills with `references/` subdirectories, upload the `SKILL.md` file — Claude will resolve the references relative to it.
 
 ## License
 
