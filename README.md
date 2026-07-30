@@ -1,6 +1,6 @@
 # AI Agent Skills
 
-A centralized collection of custom skills for AI agents like Claude and Codex. Each skill is a reusable, documented workflow that simplifies repetitive tasks, enforces quality standards, and enhances productivity.
+A centralized collection of reusable [Agent Skills](https://agentskills.io) for compatible AI agents. Each skill follows the portable `skill-name/SKILL.md` format with YAML metadata and Markdown instructions. Skills simplify repetitive work, enforce quality standards, and can be installed in supported tools such as Claude Code, Codex, and GitHub Copilot.
 
 ## Structure
 
@@ -41,12 +41,25 @@ Ten stack-agnostic principles for building and auditing applications that users 
 9. Persistence is a feature, not an afterthought
 10. Present numbered options with a recommended choice
 
-## How to Add Claude Skills
+## Install in supported agents
 
-To import a skill into your Claude Desktop application:
-1. Open the Claude Desktop app.
-2. Select **"Create Skill"**.
-3. Choose **"Upload a Skill"** and select the `SKILL.md` from the desired skill directory.
+Copy the complete skill directory—not only `SKILL.md`—to a location scanned by your agent:
+
+| Agent | Personal skills | Project skills |
+| --- | --- | --- |
+| Claude Code | `~/.claude/skills/<skill-name>/` | `.claude/skills/<skill-name>/` |
+| Codex | `~/.agents/skills/<skill-name>/` | `.agents/skills/<skill-name>/` |
+| GitHub Copilot | `~/.copilot/skills/<skill-name>/` or `~/.agents/skills/<skill-name>/` | `.github/skills/<skill-name>/`, `.claude/skills/<skill-name>/`, or `.agents/skills/<skill-name>/` |
+
+Other tools can use these skills if they implement the open Agent Skills specification or let you load Markdown instruction files manually. Compatibility is not automatic for every agent product; consult the tool's skill or instruction-file documentation.
+
+## Validation
+
+Both skills pass the official reference validator:
+
+```bash
+uvx --from skills-ref agentskills validate path/to/skill
+```
 
 ## License
 
