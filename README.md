@@ -26,7 +26,7 @@ Generates polished, publication-ready PDF books, manuals, guides, and course mat
 
 **Directory:** `claude/trustworthy-app-principles/`
 
-Ten stack-agnostic principles for building and auditing applications that users can trust — desktop or web. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes a 16-item audit checklist and a 12-entry common violations catalog.
+Ten stack-agnostic principles for building and auditing applications that users can trust — desktop or web. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes a 12-item audit checklist and a 12-entry common violations catalog.
 
 **The ten principles:**
 

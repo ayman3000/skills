@@ -28,15 +28,15 @@ Ten stack-agnostic principles for building and auditing applications that users 
 
 **When to use:**
 - Before shipping a new feature
-- When auditing an existing codebase for trust issues
-- When reviewing a PR that touches I/O, error handling, or user actions
-- When designing a new screen or interaction flow
-- When designing or auditing login history, authentication telemetry, or security-event retention
+- When auditing an existing application for trust issues
+- When reviewing changes that affect I/O, errors, state, permissions, or user actions
+- When designing a screen, workflow, or recovery path
+- When evaluating sensitive data handling, security-event logging, or retention
 
 **The ten principles:**
 
-1. **Responsiveness is the product** — never block the UI on I/O or computation
-2. **Render first, refine in the background** — show real layout immediately, never shimmer
+1. **Responsiveness is the product** — every action receives prompt, meaningful feedback
+2. **Render first, refine in the background** — show stable structure immediately and use accessible loading states
 3. **Retry transient failures, fail fast on deterministic ones** — classify errors structurally
 4. **Never fail silently** — every operation ends with a result or an actionable message
 5. **Honesty over completion** — never invent data, fake success, or disguise taxonomy mismatches
@@ -47,5 +47,5 @@ Ten stack-agnostic principles for building and auditing applications that users 
 10. **Present numbered options with a recommended choice** — decisions should be scannable and actionable
 
 **Includes:**
-- 16-item audit checklist
+- 12-item audit checklist
 - 12-entry common violations catalog
