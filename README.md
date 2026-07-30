@@ -1,16 +1,55 @@
 # AI Agent Skills
 
-This repository serves as a centralized collection of custom skills created for AI agents like Claude and Codex. Its purpose is to store, document, and share these reusable skills to simplify workflows, automate repetitive tasks, and enhance productivity.
+A centralized collection of custom skills for AI agents like Claude and Codex. Each skill is a reusable, documented workflow that simplifies repetitive tasks, enforces quality standards, and enhances productivity.
 
 ## Structure
 
-* **`claude/`**: Contains skills specifically designed for the Claude desktop application.
-    * `pdf-course-skill.skill`: A comprehensive skill for generating polished, publication-ready PDF books, manuals, and course materials. It handles Markdown authoring, LaTeX formatting, flowchart rendering, and creating minimal cover pages.
-* **`codex/`**: Contains skills designed for Codex. (Currently empty)
+```
+skills/
+├── claude/
+│   ├── pdf-course-skill.skill        # PDF book/manual/course generator
+│   └── trustworthy-app-principles/   # 10 principles + audit checklist for app trust
+│       ├── SKILL.md
+│       └── references/               # 8 deep-dive reference docs
+└── codex/                            # (Currently empty)
+```
+
+## Claude Skills
+
+### PDF Course Creator
+
+**File:** `claude/pdf-course-skill.skill`
+
+Generates polished, publication-ready PDF books, manuals, guides, and course materials. Handles Markdown authoring with LaTeX headers, pandoc compilation, Mermaid diagram rendering, and minimal cover pages via Playwright. General-purpose — works for any topic.
+
+### Trustworthy Application Principles
+
+**Directory:** `claude/trustworthy-app-principles/`
+
+Ten principles for building and auditing applications that users can trust — desktop or web. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes a 17-item audit checklist, a 31-entry common violations catalog, and 8 reference documents for Next.js/Supabase patterns, Vercel release readiness, admin navigation performance, public CMS navigation, stale-while-revalidate, authentication security events, and audit fix recipes.
+
+**The ten principles:**
+
+1. Responsiveness is the product
+2. Render first, refine in the background
+3. Retry transient failures, fail fast on deterministic ones
+4. Never fail silently
+5. Honesty over completion
+6. Warn before irreversible or outward-facing actions
+7. Long work is cancellable
+8. State is the source of truth, not the UI
+9. Persistence is a feature, not an afterthought
+10. Present numbered options with a recommended choice
 
 ## How to Add Claude Skills
 
-To import a skill into your Claude Desktop application, follow these steps:
+To import a skill into your Claude Desktop application:
 1. Open the Claude Desktop app.
 2. Select **"Create Skill"**.
-3. Choose **"Upload a skill"** and select the `.skill` file from the `claude/` directory in this repository.
+3. Choose **"Upload a skill"** and select the `.skill` file or `SKILL.md` from the `claude/` directory.
+
+For folder-based skills (like `trustworthy-app-principles`), upload the `SKILL.md` file — Claude will resolve the `references/` directory relative to it.
+
+## License
+
+MIT
