@@ -3,7 +3,7 @@ name: trustworthy-app-principles
 description: Audit and enforce trust-building principles for desktop and web applications — responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Use before shipping features and when building, auditing, or reviewing an application.
 license: MIT
 metadata:
-  version: "2.4.0"
+  version: "2.4.1"
 ---
 
 # Trustworthy Application Principles
