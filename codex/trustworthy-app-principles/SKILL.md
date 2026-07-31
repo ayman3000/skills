@@ -3,22 +3,14 @@ name: trustworthy-app-principles
 description: Audit and enforce trust-building principles for desktop and web applications — responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Use before shipping features and when building, auditing, or reviewing an application.
 license: MIT
 metadata:
-  version: "2.3.0"
+  version: "2.4.0"
 ---
 
 # Trustworthy Application Principles
 
-Ten stack-agnostic principles for building and auditing applications that users can trust. Use this skill when building, auditing, or reviewing any desktop or web application.
+Ten stack-agnostic principles for building and auditing applications that users can trust.
 
 Apply each principle according to actual user risk. A static informational surface may not need cancellation or draft persistence; a destructive, stateful, financial, or outward-facing workflow usually does. Record justified exceptions instead of applying the checklist mechanically.
-
-## When to use
-
-- Before shipping a new feature
-- When auditing an existing application for trust issues
-- When reviewing changes that affect I/O, errors, state, permissions, or user actions
-- When designing a screen, workflow, or recovery path
-- When evaluating sensitive data handling, security-event logging, or retention
 
 ## Priority when principles conflict
 
@@ -134,22 +126,9 @@ When the application or agent offers a meaningful decision, present concise numb
 - Reissue the list if new information materially changes the recommendation
 - Do not manufacture unnecessary choices when one clearly safe action can be taken directly
 
-## Audit checklist
+## Audit execution
 
-Run this before shipping:
-
-- [ ] **Responsiveness:** Does every action receive prompt, meaningful feedback?
-- [ ] **Stable rendering:** Is known structure visible while unresolved data loads, without distracting or misleading placeholders?
-- [ ] **Freshness:** Are cached, stale, and preliminary results labeled and scoped correctly?
-- [ ] **Retry behavior:** Are transient and deterministic failures handled differently?
-- [ ] **Terminal states:** Can every operation end in success, partial success, empty, cancelled, or failed — without permanent loading?
-- [ ] **Honesty:** Are all success and completion claims backed by real outcomes?
-- [ ] **Semantic integrity:** Do labels and data relationships match the real domain?
-- [ ] **Safe actions:** Do irreversible and outward-facing actions receive proportional confirmation and preview?
-- [ ] **Cancellation:** Can long work be cancelled safely, with cleanup and side effects reported?
-- [ ] **State ownership:** Is critical state authoritative outside the rendered interface?
-- [ ] **Persistence:** Does user-entered data survive realistic interruption and recovery scenarios?
-- [ ] **Decision UX:** Are meaningful choices numbered with exactly one contextual recommendation?
+For a pre-release or review audit, load **`references/audit-checklist.md`**. It combines the 12 executable checks with their common red flags so the main principles stay lean.
 
 ## How to run an audit
 
@@ -163,18 +142,3 @@ Run this before shipping:
 8. **Report evidence and remaining risk** — distinguish verified behavior from assumptions and unresolved limitations.
 
 Apply the principles proactively but not mechanically. Consistency matters; broad unmeasured rewrites are forbidden. Implementation mechanisms are means, not goals.
-
-## Common violations to look for
-
-1. Returning an empty value on error and presenting it as “no data”
-2. Logging an error without surfacing its user-visible consequence
-3. Loading indicators with no timeout or terminal failure state
-4. Destructive actions without target-specific confirmation
-5. Forms that lose in-progress work during ordinary navigation or interruption
-6. Cancel controls that hide work without stopping it
-7. Empty states that do not distinguish loading, failure, cancellation, and genuine emptiness
-8. Success messages after partial failure
-9. Fixed delays used as a substitute for readiness or completion checks
-10. Distracting animated placeholders that conceal stable, useful structure
-11. Optimistic state presented as durably saved without confirmation or rollback
-12. Decisions buried in prose instead of numbered options with one contextual recommendation

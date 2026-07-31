@@ -12,7 +12,9 @@ skills/
 │   ├── pdf-course-skill/
 │   │   └── SKILL.md
 │   ├── trustworthy-app-principles/
-│   │   └── SKILL.md
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── audit-checklist.md
 │   └── README.md
 ├── claude/                            # Generated distribution
 │   ├── pdf-course-skill/
@@ -42,7 +44,7 @@ Produces publication-ready PDF books, manuals, guides, and course materials. Cov
 
 ### Trustworthy Application Principles
 
-Ten stack-agnostic principles for building and auditing trustworthy desktop and web applications. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes a 12-item audit checklist and 12 common violations.
+Ten stack-agnostic principles for building and auditing trustworthy desktop and web applications. Covers responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Includes an on-demand 12-item audit checklist with common red flags.
 
 ## Install
 

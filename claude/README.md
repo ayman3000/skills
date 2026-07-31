@@ -25,4 +25,4 @@ Produces publication-ready PDF books, manuals, guides, and course materials. Inc
 
 **Directory:** `trustworthy-app-principles/`
 
-Provides ten stack-agnostic principles for trustworthy desktop and web applications, a 12-item audit checklist, and 12 common violations.
+Provides ten stack-agnostic principles for trustworthy desktop and web applications plus an on-demand 12-item audit checklist with common red flags.
