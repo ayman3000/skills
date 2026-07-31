@@ -1,15 +1,15 @@
-# Claude Skills
+# GitHub Copilot Skills
 
-Portable Agent Skills prepared for Claude Code and other Claude skill surfaces.
+Portable Agent Skills prepared for GitHub Copilot.
 
 ## Install
 
-Copy a complete skill directory to one of these locations:
+Copy a complete skill directory to a supported location:
 
-- Personal: `~/.claude/skills/<skill-name>/`
-- Project: `.claude/skills/<skill-name>/`
+- Personal: `~/.copilot/skills/<skill-name>/` or `~/.agents/skills/<skill-name>/`
+- Project: `.github/skills/<skill-name>/`, `.claude/skills/<skill-name>/`, or `.agents/skills/<skill-name>/`
 
-Keep `SKILL.md` and any bundled resources together. Restart or reload Claude if a newly added skill does not appear.
+Keep `SKILL.md` and any bundled resources together. Reload skills or restart Copilot after installation if the skill does not appear.
 
 ## Available skills
 

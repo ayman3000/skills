@@ -1,15 +1,15 @@
-# Claude Skills
+# Codex Skills
 
-Portable Agent Skills prepared for Claude Code and other Claude skill surfaces.
+Portable Agent Skills prepared for OpenAI Codex.
 
 ## Install
 
 Copy a complete skill directory to one of these locations:
 
-- Personal: `~/.claude/skills/<skill-name>/`
-- Project: `.claude/skills/<skill-name>/`
+- Personal: `~/.agents/skills/<skill-name>/`
+- Project: `.agents/skills/<skill-name>/`
 
-Keep `SKILL.md` and any bundled resources together. Restart or reload Claude if a newly added skill does not appear.
+Codex loads the skill metadata for discovery and reads the full `SKILL.md` when the skill is selected. Restart Codex if a newly added skill does not appear.
 
 ## Available skills
 
