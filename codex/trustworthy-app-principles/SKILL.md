@@ -1,14 +1,16 @@
 ---
 name: trustworthy-app-principles
-description: Audit and enforce trust-building principles for desktop and web applications — responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Use when building, auditing, or reviewing an application.
+description: Audit and enforce trust-building principles for desktop and web applications — responsiveness, honest failure, cancellation, persistence, safe actions, and clear decision UX. Use before shipping features and when building, auditing, or reviewing an application.
 license: MIT
 metadata:
-  version: "2.2.0"
+  version: "2.3.0"
 ---
 
 # Trustworthy Application Principles
 
 Ten stack-agnostic principles for building and auditing applications that users can trust. Use this skill when building, auditing, or reviewing any desktop or web application.
+
+Apply each principle according to actual user risk. A static informational surface may not need cancellation or draft persistence; a destructive, stateful, financial, or outward-facing workflow usually does. Record justified exceptions instead of applying the checklist mechanically.
 
 ## When to use
 
@@ -18,6 +20,10 @@ Ten stack-agnostic principles for building and auditing applications that users 
 - When designing a screen, workflow, or recovery path
 - When evaluating sensitive data handling, security-event logging, or retention
 
+## Priority when principles conflict
+
+Protect users from irreversible harm, data loss, deception, and unsafe side effects before optimizing speed or convenience. Required safety confirmations are intentional interaction steps, not responsiveness failures. Keep them concise and proportional, but never remove them merely to reduce latency.
+
 ## The principles
 
 ### 1. Responsiveness is the product
@@ -26,7 +32,7 @@ Never make the interface appear frozen while work continues. Every action should
 
 - Move genuinely heavy work off the interaction-critical path
 - Preserve usable interface and existing data while work proceeds
-- Target feedback within 100 ms; measure slower interactions before adding progress UI
+- Target acknowledgment within 100 ms; for inherently slow work such as network, model, or long-running computation, this target applies to visible acknowledgment—not completion
 - Benchmark before and after performance-sensitive changes
 - Roll back or redesign a trust-oriented refactor if it makes the experience materially slower
 

@@ -44,7 +44,7 @@ Do NOT assume or invent details. Ask what's missing, confirm what you have.
 |---|---|---|
 | **Book title** | "Practical Agentic AI" | YES — always |
 | **Subtitle** (optional) | "Tool Calling with Ollama" | Ask if they want one |
-| **Author name** | "Ayman Hamed" | YES — always |
+| **Author name** | "Sam Rivera" | YES — always |
 | **Target audience** | Beginners, intermediate, experts | YES |
 | **Chapter outline** | List of chapters/topics to cover | YES — at minimum get topics |
 | **Include diagrams?** | Flowcharts, architecture diagrams | Ask if relevant |
@@ -573,7 +573,7 @@ the user's actual content before rendering.
 | `{{SUBTITLE}}` | Subtitle or secondary title | `Tool Calling with Ollama` |
 | `{{TAGLINE_LINE_1}}`, `{{TAGLINE_LINE_2}}` | Two-line tagline | `From Zero to Confident` / `in Building Local AI Agents` |
 | `{{GUIDE_DESCRIPTION}}` | Short description of the guide | `A Practical Guide to Modern Python` |
-| `{{AUTHOR_NAME}}` | Author's full name | `Ayman Hamed` |
+| `{{AUTHOR_NAME}}` | Author's full name | `Sam Rivera` |
 | `{{FOCUS_LINE_1}}`, `{{FOCUS_LINE_2}}` | Two focus keywords | `Machine Learning` / `Deep Learning` |
 
 If the user doesn't provide a series line or tagline, omit those elements

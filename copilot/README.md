@@ -1,6 +1,8 @@
 # GitHub Copilot Skills
 
-Portable Agent Skills prepared for GitHub Copilot.
+Ready-to-install Agent Skills for GitHub Copilot.
+
+> These skill directories are generated from `canonical/`. Do not edit their `SKILL.md` files directly. Update the canonical skill and run `python3 scripts/sync-skills.py` from the repository root.
 
 ## Install
 
@@ -9,7 +11,7 @@ Copy a complete skill directory to a supported location:
 - Personal: `~/.copilot/skills/<skill-name>/` or `~/.agents/skills/<skill-name>/`
 - Project: `.github/skills/<skill-name>/`, `.claude/skills/<skill-name>/`, or `.agents/skills/<skill-name>/`
 
-Keep `SKILL.md` and any bundled resources together. Reload skills or restart Copilot after installation if the skill does not appear.
+Keep `SKILL.md` and any bundled resources together. Reload skills or restart Copilot if a newly added skill does not appear.
 
 ## Available skills
 
@@ -23,4 +25,4 @@ Produces publication-ready PDF books, manuals, guides, and course materials. Inc
 
 **Directory:** `trustworthy-app-principles/`
 
-Provides ten stack-agnostic principles for trustworthy desktop and web applications, a 12-item audit checklist, and 12 common violations. Use it when building, auditing, or reviewing application behavior involving responsiveness, errors, state, cancellation, persistence, safe actions, or decision UX.
+Provides ten stack-agnostic principles for trustworthy desktop and web applications, a 12-item audit checklist, and 12 common violations.

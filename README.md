@@ -1,38 +1,44 @@
 # AI Agent Skills
 
-Reusable skills for Claude, Codex, and GitHub Copilot. Every skill follows the open [Agent Skills specification](https://agentskills.io): a directory containing a `SKILL.md` file with YAML metadata and Markdown instructions.
+Reusable skills for Claude, Codex, GitHub Copilot, and other tools that implement the open [Agent Skills specification](https://agentskills.io).
 
-## Repository structure
+## Architecture
+
+The repository keeps one canonical source for each skill and generates ready-to-install copies for every supported agent:
 
 ```text
 skills/
-├── claude/
+├── canonical/                         # Source of truth — edit here
 │   ├── pdf-course-skill/
 │   │   └── SKILL.md
 │   ├── trustworthy-app-principles/
 │   │   └── SKILL.md
 │   └── README.md
-├── codex/
+├── claude/                            # Generated distribution
 │   ├── pdf-course-skill/
-│   │   └── SKILL.md
 │   ├── trustworthy-app-principles/
-│   │   └── SKILL.md
 │   └── README.md
-└── copilot/
-    ├── pdf-course-skill/
-    │   └── SKILL.md
-    ├── trustworthy-app-principles/
-    │   └── SKILL.md
-    └── README.md
+├── codex/                             # Generated distribution
+│   ├── pdf-course-skill/
+│   ├── trustworthy-app-principles/
+│   └── README.md
+├── copilot/                           # Generated distribution
+│   ├── pdf-course-skill/
+│   ├── trustworthy-app-principles/
+│   └── README.md
+├── scripts/
+│   └── sync-skills.py
+└── .github/workflows/
+    └── validate-skills.yml
 ```
 
-Each agent directory contains the same portable skills so users can download the directory intended for their tool without reorganizing files.
+Do not edit skill files under `claude/`, `codex/`, or `copilot/`. Edit `canonical/<skill-name>/`, then run the synchronization script.
 
 ## Available skills
 
 ### PDF Course Creator
 
-Generates polished PDF books, manuals, guides, and course materials. Covers Markdown authoring, LaTeX and Pandoc compilation, Mermaid diagram rendering, cover production, PDF merging, and source packaging.
+Produces publication-ready PDF books, manuals, guides, and course materials. Covers content authoring, diagrams, cover generation, PDF assembly, and source packaging.
 
 ### Trustworthy Application Principles
 
@@ -40,21 +46,39 @@ Ten stack-agnostic principles for building and auditing trustworthy desktop and 
 
 ## Install
 
-Copy the complete skill directory—not only `SKILL.md`—to a location scanned by your agent.
+Download or copy a complete skill directory from the folder for your agent:
+
+- **Claude:** use a directory under `claude/`
+- **Codex:** use a directory under `codex/`
+- **GitHub Copilot:** use a directory under `copilot/`
+
+Then place it in a location scanned by the tool:
 
 - **Claude Code:** `~/.claude/skills/<skill-name>/` or `.claude/skills/<skill-name>/`
 - **Codex:** `~/.agents/skills/<skill-name>/` or `.agents/skills/<skill-name>/`
 - **GitHub Copilot:** `~/.copilot/skills/<skill-name>/`, `~/.agents/skills/<skill-name>/`, `.github/skills/<skill-name>/`, or `.agents/skills/<skill-name>/`
 
-See the README inside each agent directory for tool-specific instructions.
+## Maintain
 
-## Validate
-
-Both skills pass the official Agent Skills reference validator:
+After changing a canonical skill, regenerate all distributions:
 
 ```bash
-uvx --from skills-ref agentskills validate path/to/skill
+python3 scripts/sync-skills.py
 ```
+
+Verify that generated copies are current:
+
+```bash
+python3 scripts/sync-skills.py --check
+```
+
+Validate a skill against the open specification:
+
+```bash
+uvx --from skills-ref agentskills validate canonical/<skill-name>
+```
+
+CI checks synchronization and validates every canonical and generated skill package on pushes and pull requests.
 
 ## License
 

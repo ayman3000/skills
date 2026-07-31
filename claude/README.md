@@ -1,6 +1,8 @@
 # Claude Skills
 
-Portable Agent Skills prepared for Claude Code and other Claude skill surfaces.
+Ready-to-install Agent Skills for Claude.
+
+> These skill directories are generated from `canonical/`. Do not edit their `SKILL.md` files directly. Update the canonical skill and run `python3 scripts/sync-skills.py` from the repository root.
 
 ## Install
 
@@ -23,4 +25,4 @@ Produces publication-ready PDF books, manuals, guides, and course materials. Inc
 
 **Directory:** `trustworthy-app-principles/`
 
-Provides ten stack-agnostic principles for trustworthy desktop and web applications, a 12-item audit checklist, and 12 common violations. Use it when building, auditing, or reviewing application behavior involving responsiveness, errors, state, cancellation, persistence, safe actions, or decision UX.
+Provides ten stack-agnostic principles for trustworthy desktop and web applications, a 12-item audit checklist, and 12 common violations.
